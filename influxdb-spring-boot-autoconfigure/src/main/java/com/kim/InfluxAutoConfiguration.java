@@ -32,7 +32,6 @@ public class InfluxAutoConfiguration {
     }
     @Bean(name = "influxTemplate")
     public InfluxTemplate InfluxTemplate(InfluxDB influxDB, InfluxDBMapper influxDBMapper, InfluxProperties influxProperties){
-        System.out.println("111111111");
 
         return new InfluxTemplateImpl(influxDB,influxDBMapper,influxProperties);
     }
