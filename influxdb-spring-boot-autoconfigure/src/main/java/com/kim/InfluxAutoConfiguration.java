@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.influxdb.InfluxDB;
 import org.influxdb.InfluxDBFactory;
 import org.influxdb.impl.InfluxDBMapper;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,6 +32,7 @@ public class InfluxAutoConfiguration {
     }
     @Bean(name = "influxTemplate")
     public InfluxTemplate InfluxTemplate(InfluxDB influxDB, InfluxDBMapper influxDBMapper, InfluxProperties influxProperties){
+        System.out.println("111111111");
 
         return new InfluxTemplateImpl(influxDB,influxDBMapper,influxProperties);
     }

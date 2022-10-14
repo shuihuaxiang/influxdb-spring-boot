@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdeeb475-32fb-4948-be2a-2505388b79ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="fdeeb475-32fb-4948-be2a-2505388b79ba" name="Default Changelist" comment="添加readme说明文件">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/InfluxAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/InfluxAutoConfiguration.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,18 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/templates/InfluxTemplateImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1314">
-              <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,14 +85,23 @@
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="285">
-                <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+              <first_editor relative-caret-position="367">
+                <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/InfluxAutoConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -149,6 +145,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -166,13 +167,13 @@
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/exception/BusinessException.java" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/sqlbuilders/QueryBiulder.java" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/sqlbuilders/QueryALLBuilder.java" />
-        <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/InfluxAutoConfiguration.java" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/sqlbuilders/QueryAllBuilder.java" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/sqlbuilders/DeleteBuilder.java" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/templates/InfluxTemplate.java" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/templates/InfluxTemplateImpl.java" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/InfluxAutoConfiguration.java" />
       </list>
     </option>
   </component>
@@ -413,12 +414,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665689702986</updated>
-      <workItem from="1665689705709" duration="29244000" />
+      <workItem from="1665689705709" duration="30374000" />
     </task>
+    <task id="LOCAL-00001" summary="添加readme说明文件">
+      <created>1665776600750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665776600751</updated>
+    </task>
+    <task id="LOCAL-00002" summary="添加readme说明文件">
+      <created>1665776915568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665776915568</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29244000" />
+    <option name="totallyTimeSpent" value="30374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
@@ -434,13 +450,13 @@
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.23032904" />
-      <window_info anchor="bottom" id="SonarLint" order="4" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.22922637" />
+      <window_info active="true" anchor="bottom" id="SonarLint" order="4" visible="true" weight="0.3295129" />
       <window_info anchor="bottom" id="MyBatis Log Plugin Free" order="5" />
       <window_info anchor="bottom" id="Tail" order="6" />
       <window_info anchor="bottom" id="JProfiler" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.11031519" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.35243553" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="LuaCheck" order="11" />
       <window_info anchor="bottom" id="Message" order="12" />
@@ -492,7 +508,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="添加readme说明文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加readme说明文件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/influxdb-core/src/main/java/templates/InfluxTemplate.java">
@@ -645,17 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/InfluxAutoConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/influxdb/influxdb-java/2.19/influxdb-java-2.19.jar!/org/influxdb/InfluxDB.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -754,10 +760,17 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <first_editor relative-caret-position="367">
+            <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/com/kim/InfluxAutoConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
         </state>
       </provider>
     </entry>
