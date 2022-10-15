@@ -1,10 +1,10 @@
-package com.kim.templates;
+package com.github.shuihuaxiang.templates;
 
-import com.kim.InfluxProperties;
-import com.kim.exception.BusinessException;
-import com.kim.exception.ExceptionErrorCode;
-import com.kim.sqlbuilders.DeleteBuilder;
-import com.kim.sqlbuilders.QueryAllBuilder;
+import com.github.shuihuaxiang.InfluxProperties;
+import com.github.shuihuaxiang.exception.BusinessException;
+import com.github.shuihuaxiang.exception.ExceptionErrorCode;
+import com.github.shuihuaxiang.sqlbuilders.DeleteBuilder;
+import com.github.shuihuaxiang.sqlbuilders.QueryAllBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.influxdb.InfluxDB;
 import org.influxdb.annotation.Measurement;

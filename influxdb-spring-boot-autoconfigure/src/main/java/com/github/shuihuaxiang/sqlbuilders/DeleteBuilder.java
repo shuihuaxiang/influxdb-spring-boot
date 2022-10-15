@@ -1,6 +1,4 @@
-package com.kim.sqlbuilders;
-
-import org.influxdb.annotation.Measurement;
+package com.github.shuihuaxiang.sqlbuilders;
 
 import java.util.Map;
 

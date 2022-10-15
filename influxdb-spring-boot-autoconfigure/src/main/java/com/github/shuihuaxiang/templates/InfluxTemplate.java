@@ -1,7 +1,7 @@
-package com.kim.templates;
+package com.github.shuihuaxiang.templates;
 
-import com.kim.sqlbuilders.DeleteBuilder;
-import com.kim.sqlbuilders.QueryAllBuilder;
+import com.github.shuihuaxiang.sqlbuilders.DeleteBuilder;
+import com.github.shuihuaxiang.sqlbuilders.QueryAllBuilder;
 
 import java.util.List;
 

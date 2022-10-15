@@ -15,11 +15,11 @@
         </plugins>
     </build>
     <parent>
-        <groupId>com.kim</groupId>
+        <groupId>com.github.shuihuaxiang</groupId>
         <artifactId>influxdb-spring-boot</artifactId>
         <version>1.0.1</version>
     </parent>
-    <groupId>com.kim</groupId>
+    <groupId>com.github.shuihuaxiang</groupId>
     <artifactId>influxdb-spring-boot-autoconfigure</artifactId>
     <version>1.0.1</version>
     <name>influxdb-spring-boot-autoconfigure</name>

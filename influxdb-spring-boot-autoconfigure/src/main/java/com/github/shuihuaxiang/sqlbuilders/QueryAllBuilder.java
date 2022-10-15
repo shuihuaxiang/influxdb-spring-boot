@@ -1,11 +1,7 @@
-package com.kim.sqlbuilders;
+package com.github.shuihuaxiang.sqlbuilders;
 
-import com.kim.exception.BusinessException;
-import com.kim.exception.ExceptionErrorCode;
 import org.influxdb.annotation.Measurement;
 
-import java.lang.annotation.Annotation;
-import java.util.List;
 import java.util.Map;
 
 /**

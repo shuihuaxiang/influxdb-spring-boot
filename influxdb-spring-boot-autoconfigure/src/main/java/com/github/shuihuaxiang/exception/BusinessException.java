@@ -1,4 +1,4 @@
-package com.kim.exception;
+package com.github.shuihuaxiang.exception;
 
 /**
  * @Author: kimli

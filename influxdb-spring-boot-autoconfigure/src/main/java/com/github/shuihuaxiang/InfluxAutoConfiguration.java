@@ -1,7 +1,7 @@
-package com.kim;
+package com.github.shuihuaxiang;
 
-import com.kim.templates.InfluxTemplate;
-import com.kim.templates.InfluxTemplateImpl;
+import com.github.shuihuaxiang.templates.InfluxTemplate;
+import com.github.shuihuaxiang.templates.InfluxTemplateImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.influxdb.InfluxDB;
 import org.influxdb.InfluxDBFactory;
