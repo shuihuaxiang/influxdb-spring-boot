@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdeeb475-32fb-4948-be2a-2505388b79ba" name="Default Changelist" comment="新增基于注解模块">
+    <list default="true" id="fdeeb475-32fb-4948-be2a-2505388b79ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/io/github/shuihuaxiang/utils/InfluxTimeUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/influxdb-spring-boot-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/influxdb-spring-boot-starter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="247">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="22" />
             </state>
           </provider>
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
@@ -59,14 +57,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-starter/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="24" />
             </state>
           </provider>
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/io/github/shuihuaxiang/utils/InfluxTimeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -85,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="1299">
+              <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
             </state>
           </provider>
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
@@ -100,15 +110,6 @@
                 <caret line="2" selection-start-line="2" selection-end-line="2" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/io/github/shuihuaxiang/templates/InfluxTemplate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -226,6 +227,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml" />
         <option value="$PROJECT_DIR$/influxdb-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/io/github/shuihuaxiang/utils/TimeUtil.java" />
+        <option value="$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/io/github/shuihuaxiang/utils/InfluxTimeUtil.java" />
       </list>
     </option>
   </component>
@@ -373,72 +376,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shuihuaxiang" type="462c0819:PsiDirectoryNode" />
-              <item name="annotations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-autoconfigure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shuihuaxiang" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-autoconfigure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shuihuaxiang" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-autoconfigure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shuihuaxiang" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-starter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="influxdb-spring-boot" type="462c0819:PsiDirectoryNode" />
-              <item name="influxdb-spring-boot-starter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="influxdb-spring-boot" type="b2602c69:ProjectViewProjectNode" />
@@ -490,7 +428,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InfluxdbSpringBootStarterApplication">
+  <component name="RunManager" selected="Application.InfluxTimeUtil">
+    <configuration name="InfluxTimeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.shuihuaxiang.utils.InfluxTimeUtil" />
+      <module name="influxdb-spring-boot-autoconfigure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.shuihuaxiang.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InfluxdbSpringBootAutoconfigureApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="influxdb-spring-boot-autoconfigure" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kim.InfluxdbSpringBootAutoconfigureApplication" />
@@ -505,6 +456,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.InfluxTimeUtil" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -520,7 +476,7 @@
       <workItem from="1665825116182" duration="43000" />
       <workItem from="1665825226538" duration="30078000" />
       <workItem from="1665900498219" duration="4779000" />
-      <workItem from="1666011352194" duration="36043000" />
+      <workItem from="1666011352194" duration="37445000" />
     </task>
     <task id="LOCAL-00001" summary="添加readme说明文件">
       <created>1665776600750</created>
@@ -571,17 +527,24 @@
       <option name="project" value="LOCAL" />
       <updated>1666104887380</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="新增基于注解模块">
+      <created>1666105344530</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666105344530</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106874000" />
+    <option name="totallyTimeSpent" value="108276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.563253" visible="true" weight="0.22788204" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.563253" visible="true" weight="0.18498659" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.34969324" side_tool="true" weight="0.16689008" />
@@ -596,12 +559,12 @@
       <window_info anchor="bottom" id="Tail" order="6" />
       <window_info anchor="bottom" id="JProfiler" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49865952" visible="true" weight="0.13467048" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49865952" weight="0.35100287" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="LuaCheck" order="11" weight="0.3295129" />
       <window_info anchor="bottom" id="Message" order="12" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.32808024" />
-      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.5201072" weight="0.6819484" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.5201072" visible="true" weight="0.22492836" />
       <window_info anchor="bottom" id="Debug" order="15" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
@@ -609,7 +572,7 @@
       <window_info anchor="bottom" id="Word Book" order="19" sideWeight="0.4530831" side_tool="true" weight="0.2160229" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Maven" order="2" weight="0.107238606" />
+      <window_info anchor="right" id="Maven" order="2" visible="true" weight="0.16152816" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -690,7 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/git" />
     <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-starter/target/influxdb-spring-boot-starter-1.0.1-sources.jar.asc" />
     <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-starter/target/maven-archiver/pom.properties">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1107,29 +1069,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="1299">
+          <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="247">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-starter/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/influxdb-spring-boot-autoconfigure/src/main/java/io/github/shuihuaxiang/utils/InfluxTimeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
