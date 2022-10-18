@@ -6,7 +6,7 @@
 **会持续更新，欢迎关注**
 
 ## 依赖 
-> 当前版本1.0.5
+> 当前版本1.0.6
     
             <dependency>
                 <groupId>com.kim</groupId>
