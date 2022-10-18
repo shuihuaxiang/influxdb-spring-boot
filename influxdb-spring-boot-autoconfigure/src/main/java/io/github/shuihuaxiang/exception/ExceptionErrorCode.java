@@ -1,4 +1,4 @@
-package com.github.shuihuaxiang.exception;
+package io.github.shuihuaxiang.exception;
 
 /**
  * @Author: kimli
@@ -11,7 +11,9 @@ public enum ExceptionErrorCode {
 
     ILLEGAL_DATA("002", "数据不合法"),
 
-    EMPTY_PARAMETER("003", "参数为空");
+    EMPTY_PARAMETER("003", "参数为空"),
+
+    REPEAT_PARAMETER("004", "重复提交");
 
     private String state;
 

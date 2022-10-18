@@ -1,12 +1,15 @@
-package com.github.shuihuaxiang;
+package io.github.shuihuaxiang;
 
-import com.github.shuihuaxiang.templates.InfluxTemplate;
-import com.github.shuihuaxiang.templates.InfluxTemplateImpl;
+import io.github.shuihuaxiang.core.InfluxdbExecutes;
+import io.github.shuihuaxiang.proxy.InfluxMapperProxyBeanRegister;
+import io.github.shuihuaxiang.templates.InfluxTemplate;
+import io.github.shuihuaxiang.templates.InfluxTemplateImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.influxdb.InfluxDB;
 import org.influxdb.InfluxDBFactory;
 import org.influxdb.impl.InfluxDBMapper;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -30,10 +33,22 @@ public class InfluxAutoConfiguration {
     public InfluxDBMapper influxDBMapper(InfluxDB influxDB){
         return new InfluxDBMapper(influxDB);
     }
-    @Bean(name = "influxTemplate")
-    public InfluxTemplate InfluxTemplate(InfluxDB influxDB, InfluxDBMapper influxDBMapper, InfluxProperties influxProperties){
 
-        return new InfluxTemplateImpl(influxDB,influxDBMapper,influxProperties);
+    @Bean(name = "influxdbExecutes")
+    public InfluxdbExecutes influxdbExecutes(InfluxDB influxDB, InfluxDBMapper influxDBMapper){
+
+        return new InfluxdbExecutes(influxDB,influxDBMapper);
+    }
+
+    @Bean(name = "influxTemplate")
+    public InfluxTemplate InfluxTemplate( InfluxdbExecutes influxdbExecutes,InfluxProperties influxProperties){
+
+        return new InfluxTemplateImpl(influxProperties,influxdbExecutes);
+    }
+    @Bean(name = "proxyMapperBeanRegister")
+    public InfluxMapperProxyBeanRegister proxyMapperBeanRegister(ConfigurableApplicationContext applicationContext){
+
+        return new InfluxMapperProxyBeanRegister(applicationContext);
     }
 
 }

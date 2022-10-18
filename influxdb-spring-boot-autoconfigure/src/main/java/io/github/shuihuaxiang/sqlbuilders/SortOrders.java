@@ -1,4 +1,4 @@
-package com.github.shuihuaxiang.sqlbuilders;
+package io.github.shuihuaxiang.sqlbuilders;
 
 /**
  * @Author: kimli

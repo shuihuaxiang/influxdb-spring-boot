@@ -1,43 +1,21 @@
 # influxdb-spring-boot
-一个操作influxDB的starter
-## 依赖
+**一个操作influxDB的starter，为了日常方便使用**  
+
+支持**注解**与**template**两种方式。
+
+**会持续更新，欢迎关注**
+
+## 依赖 
+> 当前版本1.0.5
     
             <dependency>
                 <groupId>com.kim</groupId>
                 <artifactId>influxdb-spring-boot-starter</artifactId>
                 <version>1.0.1</version>
             </dependency>
+   
             
-## 使用
-
-> 实体类
-
-    @Data
-    @Measurement(name = "quota")
-    public class QuotaInfo {
-        @Column(name = "host",tag = true)
-        private String host;
-    
-        @Column(name = "region",tag = true)
-        private String region;
-    
-        @Column(name = "quotaId",tag = true)
-        private String quotaId;
-    
-        @Column(name = "quotaName",tag = true)
-        private String quotaName;
-    
-        @Column(name = "unit",tag = true)
-        private String unit;
-    
-        @Column(name = "value")
-        private Double value;
-    
-        @Column(name="time")
-        private String time;
-    }
-
-## 测试类 
+## 使用示例
 
     @SpringBootTest
     class InfluxdbStarterTest {
@@ -45,10 +23,11 @@
         @Autowired
         private InfluxTemplate influxTemplate;
     
-    
+        @Resource
+        private TestInfluxMapper testInfluxMapper;
+        //influxTemplate新增
         @Test
         public void addObjectTest() {
-    
             List<Object> quotaInfoList = new ArrayList<>();
             QuotaInfo quotaInfo = new QuotaInfo();
             quotaInfo.setHost("server03");
@@ -59,28 +38,28 @@
             quotaInfo.setValue(12.10D);
             quotaInfoList.add(quotaInfo);
             QuotaInfo quotaInfo2 = new QuotaInfo();
-            quotaInfo2.setHost("server01");
+            quotaInfo2.setHost("server03");
             quotaInfo2.setRegion("zh-east");
-            quotaInfo2.setQuotaId("00003");
+            quotaInfo2.setQuotaId("00002");
             quotaInfo2.setQuotaName("温度");
             quotaInfo2.setUnit("摄氏度");
             quotaInfo2.setValue(12.40D);
             quotaInfoList.add(quotaInfo2);
             influxTemplate.insert(quotaInfoList);
         }
-    
+        //influxTemplate查询
         @Test
         public void ListTest() {
             QueryAllBuilder queryAllBuilder = new QueryAllBuilder(QuotaInfo.class);
             Map<String, String> map = new HashMap<>();
-    //        map.put("quotaId", "00003");
-    //        map.put("host", "server01");
-            queryAllBuilder.where(map)
-    //                .start("2022-10-14 03:29:17.66")
-    //                .end("2022-10-14 11:05:17.44")
-    //                .page(1L, 5L)
-                    .groupBy("host", "quotaId")
-                    .orderBy(SortOrders.ASC)
+            map.put("quotaId", "00003");
+            map.put("host", "server01");
+            queryAllBuilder.where(map) //查询条件
+                    .start("2022-10-14 03:29:17.66")
+                    .end("2022-10-14 11:05:17.44")
+                    .page(1L, 5L)//分页
+                    .groupBy("host", "quotaId") //分组
+                    .orderBy(SortOrders.ASC) //排序
                     .build();
             List<QuotaInfo> resultList = influxTemplate.select(queryAllBuilder);
             for (QuotaInfo quotaInfo : resultList) {
@@ -91,22 +70,70 @@
                 quotaInfo.setTime(time);
             }
         }
-    
+        //influxTemplate 删除
         @Test
         public void deleteTest() {
             DeleteBuilder deleteBuilder = new DeleteBuilder("quota");
             Map<String, String> map = new HashMap<>();
-            map.put("host", "server03");
+            map.put("host", "server01");
             deleteBuilder.where(map).build();
             influxTemplate.delete(deleteBuilder);
         }
-    
+        //influxTemplate手写sql执行
         @Test
         public void executeTest() {
             String sql = "select * from quota";
             influxTemplate.execute(sql);
         }
+        //Insert注解插入
+        @Test
+        public void influxMapperInsertTest() {
+            QuotaInfo quotaInfo = new QuotaInfo();
+            quotaInfo.setHost("server03");
+            quotaInfo.setRegion("zh-east");
+            quotaInfo.setQuotaId("00001");
+            quotaInfo.setQuotaName("温度");
+            quotaInfo.setUnit("摄氏度");
+            quotaInfo.setValue(5.00D);
+            int i = testInfluxMapper.insert(quotaInfo);
+            System.out.println("======"+i);
+        }
+        //Insert注解批量插入
+        @Test
+        public void influxMapperInsertListTest() {
+            List<QuotaInfo> quotaInfoList = new ArrayList<>();
+            QuotaInfo quotaInfo = new QuotaInfo();
+            quotaInfo.setHost("server03");
+            quotaInfo.setRegion("zh-east");
+            quotaInfo.setQuotaId("00001");
+            quotaInfo.setQuotaName("温度");
+            quotaInfo.setUnit("摄氏度");
+            quotaInfo.setValue(4.00D);
+            quotaInfoList.add(quotaInfo);
+            QuotaInfo quotaInfo2 = new QuotaInfo();
+            quotaInfo2.setHost("server03");
+            quotaInfo2.setRegion("zh-east");
+            quotaInfo2.setQuotaId("00002");
+            quotaInfo2.setQuotaName("温度");
+            quotaInfo2.setUnit("摄氏度");
+            quotaInfo2.setValue(3.00D);
+            quotaInfoList.add(quotaInfo2);
+            int i = testInfluxMapper.insertBatch(quotaInfoList);
+            System.out.println("======"+i);
+        }
+        //注解select查询
+         @Test
+        public void influxMapperListTest(){
+             List<QuotaInfo> list = testInfluxMapper.getlist("server03", "00001","2022-10-18 21:44:17.44");
+             System.err.println(list.toString());
+         }
+    
+        //注解delete
+        @Test
+        public void influxMapperDeleteTest(){
+            testInfluxMapper.delete("server03");
+        }
     
     }
-
-
+    
+    

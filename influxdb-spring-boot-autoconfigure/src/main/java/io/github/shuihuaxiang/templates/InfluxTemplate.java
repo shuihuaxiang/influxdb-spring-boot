@@ -1,7 +1,7 @@
-package com.github.shuihuaxiang.templates;
+package io.github.shuihuaxiang.templates;
 
-import com.github.shuihuaxiang.sqlbuilders.DeleteBuilder;
-import com.github.shuihuaxiang.sqlbuilders.QueryAllBuilder;
+import io.github.shuihuaxiang.sqlbuilders.DeleteBuilder;
+import io.github.shuihuaxiang.sqlbuilders.QueryAllBuilder;
 
 import java.util.List;
 

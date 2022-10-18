@@ -4,13 +4,130 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.shuihuaxiang</groupId>
+    <groupId>io.github.shuihuaxiang</groupId>
     <artifactId>influxdb-spring-boot</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1</version>
+    <version>1.0.4</version>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <modules>
         <module>influxdb-spring-boot-starter</module>
         <module>influxdb-spring-boot-autoconfigure</module>
     </modules>
+    <!--添加个人信息-->
+    <name>influxdb-spring-boot</name>
+    <url>https://github.com/shuihuaxiang/influxdb-spring-boot</url>
+    <description>
+        This is template for influxDb.Convenient for future use.Welcome yours suggestions.
+    </description>
+    <developers>
+        <developer>
+            <name>kim.li</name>
+            <email>415403242@qq.com</email>
+            <url>https://github.com/shuihuaxiang/influxdb-spring-boot</url>
+        </developer>
+    </developers>
 
+    <!--根据项目的开源协议-->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!--项目在github或其它托管平台的地址-->
+    <scm>
+        <connection>https://github.com/shuihuaxiang/influxdb-spring-boot.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:shuihuaxiang/influxdb-spring-boot.git</developerConnection>
+        <url>https://github.com/shuihuaxiang/influxdb-spring-boot</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <!--这个id和settings.xml中servers.server.id要相同，因为上传jar需要登录才有权限-->
+            <id>ossrh</id>
+            <name>OSS Snapshots Repository</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <!--这个id和settings.xml中servers.server.id要相同，因为上传jar需要登录才有权限-->
+            <id>ossrh</id>
+            <name>OSS Staging Repository</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <!--发布到中央SNAPSHOT仓库插件：自动close和release-->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+
+            <!--生成源码插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--生成API文档插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <source>11</source>
+                    <aggregate>true</aggregate>
+                    <charset>UTF-8</charset>
+                    <encoding>UTF-8</encoding>
+                    <docencoding>UTF-8</docencoding>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--gpg插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
